@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <!-- String parameters which we can use when needed -->
+    <parameters>
+        <parameter key="bcgh_price.view_dir">%bcgh_price.plugin_dir%/Resources/views/</parameter>
+    </parameters>
+    <services>
+        <!-- Subscribers as Services -->
+        <service id="bcgh_price.subscriber.template_registration" class="bcghPrice\Subscriber\TemplateRegistration">
+			<argument type="string">%bcgh_price.plugin_dir%</argument>
+            <argument type="service" id="template"/>
+            <tag name="shopware.event_subscriber"/>
+
+        </service>
+        <service id="bcgh_price.subscriber.controller_path" class="bcghPrice\Subscriber\ControllerPath">
+
+            <argument type="service" id="service_container" />
+
+            <argument type="service" id="template" />
+
+            <argument type="string">%bcgh_price.plugin_dir%</argument>
+
+            <argument type="string">%bcgh_price.view_dir%</argument>
+
+            <tag name="shopware.event_subscriber" />
+
+        </service>
+
+    </services>
+
+</container>

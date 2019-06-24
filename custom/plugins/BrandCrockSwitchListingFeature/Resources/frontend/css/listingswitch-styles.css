@@ -1,0 +1,42 @@
+.listing-options .list-button {
+    background-color: transparent; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 2px;
+    padding: 2px;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: 1px solid transparent;
+}
+.listing-options .list-button:hover,
+.listing-options .list-button:focus,
+.listing-options .list-button.active{
+    border: 1px solid orange;
+
+    outline: none;
+}
+.list-select-form{
+    display: inline-block;
+    padding: 0 10px;
+    float: left;
+}
+
+@media only screen and (max-width: 920px) {
+
+    .list-select-form {
+        padding: 10px 5px;
+        float: left;
+        width: 100%;
+        border-top: #dadae5;
+        background: #fff;
+    }
+    @media only screen and (max-width: 767px) {
+        .list-select-form {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,3 @@
+<h1>Connector Yatego</h1>
+<br />
+<p>Der Connector stellt die Verbindung her und importiert die Bestellungen.</p>

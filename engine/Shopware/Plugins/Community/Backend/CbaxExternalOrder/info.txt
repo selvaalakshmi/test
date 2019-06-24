@@ -1,0 +1,3 @@
+<h1>Externe Bestellungen</h1>
+<br />
+<p>Anzeigen und Bearbeiten von Bestellungen von externen Marktplätzen wie z.B: Amazon, eBay, Rakuten, Hitmeister u.s.w.</p>

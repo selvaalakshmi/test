@@ -1,0 +1,14 @@
+[2019-05-21 07:08:59] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"9e2164e"}
+[2019-05-21 07:08:59] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"9e2164e"}
+[2019-05-21 07:09:05] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"bc32184"}
+[2019-05-21 07:09:05] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"bc32184"}
+[2019-05-21 07:09:07] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"8938002"}
+[2019-05-21 07:09:07] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"8938002"}
+[2019-05-21 07:11:34] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"b4dbc45"}
+[2019-05-21 07:11:34] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"b4dbc45"}
+[2019-05-21 07:15:41] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"90f0acd"}
+[2019-05-21 07:15:41] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"90f0acd"}
+[2019-05-21 07:17:52] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"907337f"}
+[2019-05-21 07:17:52] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"907337f"}
+[2019-05-21 07:18:15] plentyconnector.DEBUG: Query received: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"75fdb7f"}
+[2019-05-21 07:18:15] plentyconnector.DEBUG: Query processed: FetchTransferObjectQuery {"adapterName":"PlentymarketsAdapter","objectType":"Country","queryType":"all","objectIdentifier":null} {"uid":"75fdb7f"}

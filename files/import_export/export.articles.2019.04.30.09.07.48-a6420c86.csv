@@ -1,0 +1,15 @@
+ordernumber;mainnumber;name;supplier;tax;price_EK;pseudoprice_EK;baseprice_EK;from_EK;to_EK;price_H;pseudoprice_H;baseprice_H;from_H;to_H;active;categories
+SW10003;SW10003;Main product with ESD download;Shopware Freetime;19,00;0,99;0;;1;beliebig;;;;;;1;7
+SW10001;SW10001;Main product;Shopware Freetime;19,00;459,95;0;;1;beliebig;;;;;;1;7
+SW10002;SW10002;Main product e-mail-notification;Shopware Freetime;19,00;950,5;0;;1;beliebig;;;;;;1;7
+SW10006;SW10006;Shipping free product with highlighting;Shopware Fashion;19,00;15;0;;1;beliebig;;;;;;1;7|12
+SW10007;SW10007;Main product with properties;Shopware Fashion;19,00;19,99;0;;1;beliebig;;;;;;1;7|12
+SW10008;SW10008;Main product with resources;Shopware Fashion;19,00;5,99;0;;1;beliebig;;;;;;1;7|11|12
+SW10010;SW10010;Main product base price calculation;Shopware Food;19,00;5;0;;1;beliebig;;;;;;1;7|10
+SW10011;SW10011;Sold out main product;Shopware Food;19,00;2,5;0;;1;beliebig;;;;;;1;7|8
+SW10012;SW10012;Main product with cross-selling;Shopware Food;19,00;5;0;;1;beliebig;;;;;;1;7|9
+SW10013;SW10013;Main product with reviews;Shopware Food;19,00;1,99;0;;1;beliebig;;;;;;1;7|10
+SW10014;SW10014;Product with image-configurator;Shopware Fashion;19,00;259,99;0;;1;beliebig;;;;;;1;7|11
+SW10005.4;SW10005.4;Variant product;Shopware Fashion;19,00;19,99;0;;1;beliebig;;;;;;1;7|11
+SW10009.8;SW10009.8;Product with selection-configurator;Shopware Fashion;19,00;25;0;;1;beliebig;;;;;;1;7|12
+SW10004.2;SW10004.2;Product with default-configurator;Shopware Freetime;19,00;30;50;;1;beliebig;;;;;;1;7

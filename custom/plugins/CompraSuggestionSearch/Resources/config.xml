@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_active_suggestion_search</name>
+            <label lang="de">Vorschlagssuche verwenden</label>
+            <label lang="en">Use suggestion search</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", falls die Vorschlagssuche für diesen (Sub)Shop verwendet werden sollen.</description>
+            <description lang="en">Choose "yes" if suggestion search should be used for this (sub)shop.</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_active_elasticsearch</name>
+            <label lang="de">Elasticsearch aktiv</label>
+            <label lang="en">Elasticsearch active</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", falls Sie Elasticsearch aktiv im Shop verwenden. Dies ist wichtig für Einstellungen im Plugin.</description>
+            <description lang="en">Choose "yes" if Elasticsearch is active and in use in your shop. This is important for plugin settings.</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_categories</name>
+            <label lang="de">Kategorien anzeigen</label>
+            <label lang="en">Show categories</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", wenn Kategorien in der Vorschlagssuche angezeigt werden sollen.</description>
+            <description lang="en">Choose "yes" if categories should be shown in the suggestion search</description>
+        </element>
+
+        <element required="true" type="number" scope="shop">
+            <name>categories_number_results</name>
+            <label lang="de">Anzahl Kategorien</label>
+            <label lang="en">Number of categories</label>
+            <value>10</value>
+            <description lang="de">Anzahl der Kategorien, die angezeigt werden sollen</description>
+            <description lang="en">Number of categories to be displayed</description>
+            <options>
+                <minValue>1</minValue>
+                <triggerAction>all</triggerAction>
+            </options>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_categories_link_to_search_results</name>
+            <label lang="de">Kategoriename verlinkt auf Suchergebnisseite</label>
+            <label lang="en">Category name links to search results page</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", wenn ein Klick auf einen Kategorienamen auf die Suchergebnis- und nicht die Kategorieseite verlinken soll.</description>
+            <description lang="en">Choose "yes" if a click on the category name should link to the search results instead of the category page.</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_categories_with_filter</name>
+            <label lang="de">Suchbegriffsfilter für Kategorien aktivieren</label>
+            <label lang="en">Enable searchterm filter for categories</label>
+            <value>true</value>
+            <description lang="de">'Wählen Sie "Ja", wenn Sie die Suchbegriffsfilterung für die Kategorienanzeige aktivieren wollen.</description>
+            <description lang="en">Choose "yes" if you want to enable searchfiltering by categories.</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_manufacturer</name>
+            <label lang="de">Hersteller anzeigen</label>
+            <label lang="en">Show manufacturer</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", wenn Hersteller in der Vorschlagssuche angezeigt werden sollen.</description>
+            <description lang="en">Choose "yes" if manufacturer should be shown in the suggestion search.</description>
+        </element>
+
+        <element required="true" type="number" scope="shop">
+            <name>manufacturer_number_results</name>
+            <label lang="de">Anzahl Hersteller</label>
+            <label lang="en">Number of manufacturer</label>
+            <value>10</value>
+            <description lang="de">Anzahl der Hersteller, die angezeigt werden sollen</description>
+            <description lang="en">Number of manufacturer to be displayed</description>
+            <options>
+                <minValue>1</minValue>
+                <triggerAction>all</triggerAction>
+            </options>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_manufacturer_link_to_search_results</name>
+            <label lang="de">Herstellername verlinkt auf Suchergebnisseite</label>
+            <label lang="en">Manufacturer name links to search results page</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", wenn ein Klick auf einen Herstellernamen auf die Suchergebnis- und nicht die Herstellerseite verlinken soll</description>
+            <description lang="en">Choose "yes" if a click on the manufacturer name should link to the search results instead of the manufacturer page</description>
+        </element>
+
+        <element required="false" type="boolean" scope="shop">
+            <name>suggestions_manufacturer_with_filter</name>
+            <label lang="de">Suchbegriffsfilter für Hersteller aktivieren</label>
+            <label lang="en">Enable searchterm filter for manufacturer</label>
+            <value>true</value>
+            <description lang="de">Wählen Sie "Ja", wenn Sie die Suchbegriffsfilterung für die Herstelleranzeige aktivieren wollen</description>
+            <description lang="en">Choose "yes" if you want to enable searchfiltering by manufacturer</description>
+        </element>
+
+    </elements>
+</config>

@@ -1,0 +1,20 @@
+{extends file="parent:frontend/detail/data.tpl"}
+    {block name='frontend_detail_data_price_default'}
+        <span class="price--content content--default bcgprice">
+            <meta itemprop="price" content="{$sArticle.price|replace:',':'.'}">
+            {if $sArticle.priceStartingFrom && !$sArticle.liveshoppingData}{s name='ListingBoxArticleStartsAt'}{/s} {/if}
+            
+        {assign var=MinPrice value={action module=frontend controller=bcghPrice action=bcdetailmin sArticleDetailsId =$sArticle.price sArticleId=$sArticle.articleID  sArticleTax=$sArticle.tax}|replace:',':'.'}
+        
+        {assign var=MaxPrice value={action module=frontend controller=bcghPrice action=bcdetailmax sArticleDetailsId =$sArticle.price sArticleId=$sArticle.articleID  sArticleTax=$sArticle.tax}|replace:',':'.'}
+       
+        {if $MinPrice && $MinPrice|strip neq ' ' && $MaxPrice && $MaxPrice|strip neq ' ' && $sArticle.choose_an_option}
+            {s name="fromTitle" namespace="frontend/listing/productPrice"}From{/s}
+                 {$MinPrice|currency} - {$MaxPrice|currency} 
+                    {else}
+            {if $sArticle.priceStartingFrom && !$sArticle.liveshoppingData}{s name='ListingBoxArticleStartsAt' namespace="frontend/listing/box_article"}{/s} {/if}{$sArticle.price|currency} {s name="Star" namespace="frontend/listing/box_article"}{/s}
+        {/if}
+
+        </span>
+    {/block}
+    {$smarty.block.parent}

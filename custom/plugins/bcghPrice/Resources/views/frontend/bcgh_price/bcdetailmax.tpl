@@ -1,0 +1,3 @@
+{if $maxPrice}
+{$maxPrice}
+{/if}

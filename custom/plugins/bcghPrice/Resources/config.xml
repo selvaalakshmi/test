@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element type="select" >
+            <name>active</name>
+            <label>Aktive</label>
+            <value>Ja</value>
+            <store>
+                <option>
+                    <value>0</value>
+                    <label lang="de">Nein</label>
+                </option>
+                <option>
+                    <value>Ja</value>
+                    <label lang="de">Ja</label>
+                </option>
+            </store>
+        </element>
+    </elements>
+</config>

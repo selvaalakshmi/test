@@ -1,0 +1,29 @@
+{block name="frontend_plugins_advanced_menu_main_container"}
+    <div class="mega_menu_custom_wrap">
+        <div class="mega_menu_box brand_section">
+            {foreach $mainCategory.suppliers as $supplier}
+                <div class="menu_left_colums"><img src="{media path={$supplier.image}}" alt=""/>
+                    <div class="brand_categories_show"><i class=""></i> {$supplier.description}
+                    </div>
+                </div>
+                <div class="menu_right_colums">
+                    {foreach $supplier.categories as $category}
+                        <div class="menu_right_menu_box">
+                            <div class="mega_cate_img"><img src="{$category.media.source}"></div>
+                            <h4>{$category.name}</h4>
+                            <ul>
+                                {foreach $category.articles as $article}
+                                    <li>
+                                        <a href="{link file={$article.link}}">{$article.name}</a>
+                                    </li>
+                                {/foreach}
+                            </ul>
+                        </div>
+                    {/foreach}
+
+                </div>
+            {/foreach}
+        </div>
+    </div>
+{/block}
+

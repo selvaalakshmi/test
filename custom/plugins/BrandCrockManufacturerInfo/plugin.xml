@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+
+    <label>Manufacturer Information</label>
+    <label lang="de">Herstellerinformationen</label>
+    <version>1.0.0</version>
+    <copyright>(c) by eBakery</copyright>
+    <link>http://pfiff.ebakery-academy.de</link>
+    <author>eBakery</author>
+    <compatibility minVersion="5.2.0" />
+    <changelog version="1.0.0">
+        <changes>
+            <![CDATA[
+        First release
+        ]]>
+        </changes>
+        <changes lang="de">
+            <![CDATA[
+        Erstveröffentlichung
+        ]]>
+        </changes>
+    </changelog>
+    
+
+</plugin>

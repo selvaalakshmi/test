@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+<label>Switch Listing View</label>
+<label lang="de">Wechseln Listing View</label>
+<version>1.0.0</version>
+<copyright>(c) by  eBakery</copyright>
+<link>http://pfiff.ebakery-academy.de</link>
+<author>eBakery</author>
+<compatibility minVersion="5.2.0" />
+<changelog version="1.0.0">
+   <changes>
+        <![CDATA[
+        Initial Release
+        ]]>
+   </changes>
+   <changes lang="de">
+        <![CDATA[
+        Erste Veröffentlichung
+        ]]>
+   </changes>
+</changelog>
+<description>
+   <![CDATA[
+   <b>Switch Listing View</b>
+   <p>Switch Listing View plugin enables your product listing page to be viewed differently. 
+   Different listing view can be selected by clicking on the icons, available beside filter drop down menu.</p>
+ <ul>
+	<li>List view</li>
+	<li>Minimal view</li>
+</ul>
+   ]]>
+</description>
+<description lang="de">
+   <![CDATA[
+   <b>Wechseln Listing View</b>
+   <p>Wechseln listing view plugin ermöglicht es, dass Ihre Produktlistungsseite anders dargestellt wird. Dieses Plugin bietet drei 
+   verschiedene Ansichten auf der Produktauflistungsseite. Sie können eine andere Ansicht der Auflistung auswählen, indem Sie auf das Symbol klicken, 
+   das neben dem Filter-Dropdown-Menü verfügbar ist.</p>
+	<ul>
+		<li>Listenansicht</li>
+		<li>Minimale Ansicht</li>
+	</ul>
+   ]]>
+</description>
+
+</plugin>

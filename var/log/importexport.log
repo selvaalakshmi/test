@@ -1,0 +1,4 @@
+date/time;file;profile;message;successFlag
+2019-04-30 09:07:50;export.articles.2019.04.30.09.07.48-a6420c86.csv;default_articles_minimal;14 Articles exported successfully;true
+2019-05-21 08:05:21;export.articles.2019.05.21.08.05.20-05dd4877.csv;default_articles_complete;14 Articles exported successfully;true
+2019-05-21 08:05:27;export.articles.2019.05.21.08.05.26-3628e6f6.csv;default_articles_complete;37 Articles exported successfully;true

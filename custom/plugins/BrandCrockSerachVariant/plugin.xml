@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="en">Search variant</label>
+    <label lang="de">Search variant</label>
+    <version>1.0.0</version>
+    <copyright>(c) by BrandCrock GmbH</copyright>
+    <license>proprietary</license>
+    <link>https://brandcrock.de/</link>
+    <author>BrandCrock GmbH</author>
+
+    <compatibility minVersion="5.2.0" />
+
+    <changelog version="1.0.0">
+        <changes lang="de">Erste Veröffentlichung</changes>
+        <changes lang="en">Initial Release</changes>
+    </changelog>
+	<description lang="de">
+		Dieses Plug-in stellt die Anzeige der Artikelbilder auf der Rechnung PDF vor und bietet zusätzlich die Download-Optionen für die Rechnung PDF im Kundenkonto. 
+	</description>
+
+	<description lang="en">
+		This plug-in introduces to display the Article images on Invoice PDF and additionally provides the Invoice PDF download options in customer account. 
+	</description>
+</plugin>

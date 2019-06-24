@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service class="CompraSuggestionSearch\Subscriber\AjaxSearch" id="compra_suggestion_search.subscriber.ajax_search">
+            <tag name="shopware.event_subscriber"/>
+            <argument>%compra_suggestion_search.plugin_dir%</argument>
+        </service>
+
+        <service class="CompraSuggestionSearch\Compatibility\ExpandLegacyStructConverter" id="compra_suggestion_search.compatibility.expand_legacy_struct_converter"
+            decorates="legacy_struct_converter">
+            <argument type="service" id="compra_suggestion_search.compatibility.expand_legacy_struct_converter.inner"/>
+        </service>
+    </services>
+
+</container>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
+
+    <elements>
+        <element type="boolean" scope="shop">
+            <name>show</name>
+            <label lang="de">Menü anzeigen</label>
+            <label lang="en">Show menu</label>
+            <value>1</value>
+        </element>
+        <element type="number" scope="shop">
+            <name>hoverDelay</name>
+            <label lang="de">Hover Verzögerung (ms)</label>
+            <label lang="en">Hover delay (ms)</label>
+            <value>250</value>
+        </element>
+        <element type="combo" scope="shop" required="true">
+            <name>flatLayoutCategories</name>
+            <label lang="de">Flache Layoutkategorien</label>
+            <label lang="en">Flat layout categories</label>
+            <store>
+                <![CDATA[Ext.define('BrandCrock.CustomAdvanceMenu.Form', {
+                extend: 'Ext.data.Store',
+                fields: [
+                    { name:'id', type: 'int' },
+                    { name:'name', type: 'string' }
+                ],
+                autoLoad: true,
+                pageSize: 50,
+                proxy: {
+                    type: 'ajax',
+                    url: window.location.href.substr(0, window.location.href.indexOf('backend')) + 'backend/CustomAdvanceMenu/getTopCategories',
+                    reader: {
+                        type: 'json',
+                        root: 'data',
+                        totalProperty: 'total'
+                    }
+                }
+                }).create();//new ]]>
+            </store>
+            <options>
+                <multiSelect>true</multiSelect>
+            </options>
+        </element>
+        <element type="combo" scope="shop" required="true">
+            <name>tabLayoutCategories</name>
+            <label lang="de">Tab-Layout-Kategorien</label>
+            <label lang="en">Tab layout categories</label>
+            <store>
+                <![CDATA[Ext.define('BrandCrock.CustomAdvanceMenu.Form', {
+                extend: 'Ext.data.Store',
+                fields: [
+                    { name:'id', type: 'int' },
+                    { name:'name', type: 'string' }
+                ],
+                autoLoad: true,
+                pageSize: 50,
+                proxy: {
+                    type: 'ajax',
+                    url: window.location.href.substr(0, window.location.href.indexOf('backend')) + 'backend/CustomAdvanceMenu/getTopCategories',
+                    reader: {
+                        type: 'json',
+                        root: 'data',
+                        totalProperty: 'total'
+                    }
+                }
+                }).create();//new ]]>
+            </store>
+            <options>
+                <multiSelect>true</multiSelect>
+            </options>
+        </element>
+        <element type="boolean" scope="shop">
+            <name>caching</name>
+            <label lang="de">Caching aktivieren</label>
+            <label lang="en">Enable caching</label>
+            <value>1</value>
+        </element>
+        <element type="number" scope="shop">
+            <name>cachetime</name>
+            <label lang="de">Cache-Zeit (Sekunden)</label>
+            <label lang="en">Cache time(seconds)</label>
+            <value>86400</value>
+        </element>
+    </elements>
+</config>

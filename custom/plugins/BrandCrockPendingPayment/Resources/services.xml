@@ -1,0 +1,18 @@
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="brand_crock_pending_payment.subscriber.templates" class="BrandCrockPendingPayment\Subscriber\TemplateRegistration">
+            <argument>%brand_crock_pending_payment.plugin_dir%</argument>
+            <argument type="service" id="template"/>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+        <service id="brand_crock_pending_payment.subscriber.Frontend" class="BrandCrockPendingPayment\Subscriber\Frontend">
+            <tag name="shopware.event_subscriber"/>
+        </service>
+        <service id="brand_crock_pending_payment.subscriber.Backend" class="BrandCrockPendingPayment\Subscriber\Backend">
+            <tag name="shopware.event_subscriber"/>
+        </service>
+    </services>
+</container>

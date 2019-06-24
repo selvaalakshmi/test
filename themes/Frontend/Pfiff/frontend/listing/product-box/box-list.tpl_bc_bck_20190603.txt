@@ -1,0 +1,248 @@
+{extends file='frontend/listing/product-box/box-basic.tpl'}
+
+{block name='frontend_listing_box_article_info_container'}
+    <div class="product--headerinfo">
+        <div class="product--title--headerinfo">
+            {* Product name *}
+            {block name='frontend_listing_box_article_name'}
+                <a href="{$sArticle.linkDetails}" class="product--title" title="{$sArticle.articleName|escapeHtml}">
+                    {$sArticle.articleName|truncate:50|escapeHtml}
+                </a>
+            {/block}
+        </div>
+        <div class="product--headerinfo-supplier">
+            {*<img src="{$sArticle.supplierImg}" alt="{$sArticle.supplierName|escape}">*}
+        </div>
+    </div>
+    <div class="product--content--information">
+        <div class="product--content--information-left">
+            <div class="product--image-wrapper">
+                {* Product image *}
+                {block name='frontend_listing_box_article_picture'}
+                    {include file="frontend/listing/product-box/product-image.tpl"}
+                {/block}
+            </div>
+            <div class="carousel_listing">
+                <div class="owl-carousel owl-theme">
+                    <script type="text/javascript">
+                        $(document).ready(function(){
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:10000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+   });
+ }); 
+                    </script>
+
+                {if $articleImages}
+                                        {foreach $articleImages[$sArticle.articleID] as $articleImage}
+                                            <div class="item">
+                                                 <img src='{$articleImage}' alt=""> 
+                                            </div>
+                                        {/foreach}
+                {else}
+                    {foreach $sendArrayImage as $bcghImageArray}
+                        {if $sArticle.articleID == $bcghImageArray.articles_details_id}
+                            {assign var='imageName' value=$bcghImageArray.image}
+                            {foreach $imageName as $imageArticle}
+                                <div class="item">
+                                    <img src='{$imageArticle}' alt="">
+                                </div>
+                            {/foreach}
+                        {/if}
+                    {/foreach}
+                {/if}
+
+            </div>
+            </div>
+        </div>
+        <div class="product--content--information-mid">
+            {* Product description *}
+            {block name='frontend_listing_box_article_description'}
+                <div class="product--description">
+                    {$sArticle.attr1}
+                </div>
+            {/block}
+
+            {*<div class="product--specs">*}
+                {*<div class="owl-carousel owl-theme">*}
+
+                    {*{if $articleImages}*}
+                        {*{foreach $articleImages[$sArticle.ordernumber] as $articleImage}*}
+                            {*<div class="item">*}
+                                {*<img src='{$articleImage}' alt="">*}
+                            {*</div>*}
+                        {*{/foreach}*}
+                    {*{else}*}
+                        {*{foreach $sendArrayImage as $bcghImageArray}*}
+                            {*{if $sArticle.articleID == $bcghImageArray.articles_details_id}*}
+                                {*{assign var='imageName' value=$bcghImageArray.image}*}
+                                {*{foreach $imageName as $imageArticle}*}
+                                    {*<div class="item">*}
+                                        {*<img src='{$imageArticle}' alt="">*}
+                                    {*</div>*}
+                                {*{/foreach}*}
+                            {*{/if}*}
+                        {*{/foreach}*}
+                    {*{/if}*}
+
+                {*</div>*}
+            {*</div>*}
+        </div>
+        <div class="product--content--information-right">
+            <img src='{link file='frontend/_public/src/img/ts.png' fullPath}' alt="" class="ts_logo">
+            {block name='frontend_listing_box_article_price_info'}
+                <div class="product--price-info">
+                    {* Product price - Default and discount price *}
+                    {block name='frontend_listing_box_article_price'}
+                        {include file="frontend/listing/product-box/product-price.tpl"}
+                    {/block}
+                    {* Product price - Unit price *}
+                    {block name='frontend_listing_box_article_unit'}
+                        {include file="frontend/listing/product-box/product-price-unit.tpl"}
+                    {/block}
+                </div>
+            {/block}
+            {* Variant description *}
+            {block name='frontend_listing_box_variant_description'}
+                {if $sArticle.attributes.swagVariantConfiguration}
+                    <div class="variant--description">
+                                    <span title="
+                                        {foreach $sArticle.attributes.swagVariantConfiguration->get('value') as $group}
+                                                {$group.groupName}: {$group.optionName}
+                                        {/foreach}
+                                        ">
+                                        {foreach $sArticle.attributes.swagVariantConfiguration->get('value') as $group}
+                                            <span class="variant--description--line">
+                                                <span class="variant--groupName">{$group.groupName}
+                                                    :</span> {$group.optionName} {if !$group@last}|{/if}
+                                            </span>
+                                        {/foreach}
+                                    </span>
+                    </div>
+                {/if}
+            {/block}
+            <div class="product--shipping-info">
+                <div class="product--shipping-info-text">
+                    <div class="delTime">
+                        <div class="countdown">
+                            <i><img src='{link file='frontend/_public/src/img/icons/van.png' fullPath}' alt=""></i>
+                            <span>Versand: 1 –2 Tage </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {*<div class="product--actions">*}
+            {block name="frontend_listing_box_article_buy"}
+                <div class="product--btn-container">
+                    <div class="detail">Verfügbarkeit:
+                        <span>SOFORT VERFÜGBAR</span>
+                    </div>
+
+                    <form name="sAddToBasket" method="post" action="{url controller=checkout action=addArticle}"
+                          class="buybox--form" data-add-article="true"
+                          data-eventName="submit"{if $theme.offcanvasCart} data-showModal="false" data-addArticleUrl="{url controller=checkout action=ajaxAddArticleCart}"{/if}>
+
+                        {block name="frontend_detail_buy_button_container_outer"}
+                            {if (!isset($sArticle.active) || $sArticle.active)}
+                                {if $sArticle.isAvailable}
+                                    {block name="frontend_detail_buy_button_container"}
+                                        <input type="hidden" name="sAdd" value="{$sArticle.ordernumber}">
+                                        <div class="buybox--button-container block-group{if $NotifyHideBasket && $sArticle.notification && $sArticle.instock < $sArticle.minpurchase} is--hidden{/if}">
+
+                                            {* Quantity selection *}
+                                            {block name='frontend_detail_buy_quantity'}
+                                                <div class="buybox--quantity block">
+                                                    {$maxQuantity=$sArticle.maxpurchase+1}
+                                                    {if $sArticle.laststock && $sArticle.instock < $sArticle.maxpurchase}
+                                                        {$maxQuantity=$sArticle.instock+1}
+                                                    {/if}
+
+                                                    {block name='frontend_detail_buy_quantity_select'}
+                                                        <div class="select-field">
+                                                            <select id="sQuantity" name="sQuantity"
+                                                                    class="quantity--select">
+                                                                {section name="i" start=$sArticle.minpurchase loop=$maxQuantity step=$sArticle.purchasesteps}
+                                                                    <option value="{$smarty.section.i.index}">{$smarty.section.i.index}{if $sArticle.packunit} {$sArticle.packunit}{/if}</option>
+                                                                {/section}
+                                                            </select>
+                                                        </div>
+                                                    {/block}
+                                                </div>
+                                            {/block}
+
+                                            {* "stock *}
+                                            <div class="stock--value">
+                                                Stück
+                                            </div>
+                                           
+                                             {if {config name="displayListingBuyButton"}}
+                                <div class="product--btn-container">
+                                    {if $sArticle.allowBuyInListing}
+                                        {include file="frontend/listing/product-box/button-buy.tpl"}
+                                    {else}
+                                        {include file="frontend/listing/product-box/button-detail.tpl"}
+                                    {/if}
+                                </div>
+                            {/if}
+
+                                            {* "Buy now" button *}
+                                            {block name="frontend_detail_buy_button"}
+                                                {*{if $sArticle.sConfigurator && !$activeConfiguratorSelection}*}
+                                                    {*<button class="buybox--button block btn is--disabled is--icon-right is--large"*}
+                                                            {*disabled="disabled" aria-disabled="true"*}
+                                                            {*name="{s name="DetailBuyActionAddName"}{/s}"{if $buy_box_display} style="{$buy_box_display}"{/if}>*}
+                                                        {*{s name="DetailBuyActionAdd"}{/s} <i*}
+                                                                {*class="icon--arrow-right"></i>*}
+                                                    {*</button>*}
+                                                {*{else}*}
+                                                   <!--  <button class="buybox--button block btn is--primary is--icon-right is--center is--large"
+                                                            name="{s name="DetailBuyActionAddName"}{/s}"{if $buy_box_display} style="{$buy_box_display}"{/if}>
+                                                        {s name="DetailBuyActionAdd"}{/s} <i
+                                                                class="icon--arrow-right"></i>
+                                                    </button> -->
+                                                {*{/if}*}
+                                            {/block}
+                                        </div>
+                                    {/block}
+                                {/if}
+                            {/if}
+                        {/block}
+                    </form>
+                    {* PayPal button *}
+                   <!-- <a href="#" class="paypal_listing_btn">
+                        Direkt zu <span>PayPal</span>
+                    </a>-->
+                    {*{include file="frontend/listing/product-box/button-buy.tpl"}*}
+                    {block name='frontend_listing_box_article_actions'}
+                        {include file="frontend/listing/product-box/product-actions.tpl"}
+                    {/block}
+                </div>
+            {/block}
+
+            <div class="costday">
+                <img src='{link file='frontend/_public/src/img/icons/van.png' fullPath}' alt=""> kostenfreie Rucksendung 30 tag lang moglich
+            </div>
+            <div class="tnc">
+                Bestellen sie innerhalb der nachsten 18 stunde(n) und 48 Minuten und der Versand
+                erfolgt Morgen, den 11.04.
+            </div>
+
+        </div>
+    </div>
+{/block}

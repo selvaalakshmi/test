@@ -1,0 +1,17 @@
+<p style="padding-bottom:8px;color:999;font-style:italic;">
+    Mit dem Shopware Migrations-Plugin können Daten aus bestehenden Shop-Systemen automatisch in Shopware übernommen werden. Der Assistent verfügt über verschiedene Migrationsprofile und wird kontinuierlich weiterentwickelt.
+
+    Weitere Informationen dazu finden Sie <a href="http://wiki.shopware.com/Plugin-Migration-von-anderen-Shopsystemen-zu-Shopware_detail_1011.html" target="_blank">Shopware Wiki</a>.<br />
+    <br />
+    Die Daten können aus folgenden Shopsystemen übernommen werden:
+    <ul style="padding-bottom:8px;color:999;font-style:italic;">
+        <li>OXID eShop 4.4.5 bis 4.9.7</li>
+        <li>Magento 1.7.1.0 bis 1.9.3.4</li>
+        <li>Magento2 2.1.5 bis 2.1.8</li>
+        <li>xt:Commerce VEYTON 4.0 bis 4.1</li>
+        <li>xt:Commerce 3.0.4</li>
+        <li>Gambio GX bis 2.7.2.0</li>
+        <li>PrestaShop 1.6.1.4</li>
+        <li>WooCommerce 2.5.5</li>
+    </ul>
+</p>
